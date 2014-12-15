@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd" version="2.0">
+    <persistence-unit name="locationservices" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <class>com.sean.data.persistence.jpa.model.LatitudeLongitude</class>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes> 
+       <properties>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/javacode" />
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <property name="javax.persistence.jdbc.password" value="" />
+            <property name="hbm2ddl.auto" value="create-drop" />
+            <property name="hbm2ddl.auto" value="create" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
+            <property name="hibernate.transaction.flush_before_completion" value="true" />
+            <property name="connection.pool_size" value="100"/>
+            <property name="hibernate.jdbc.fetch_size" value='50'/>
+            <property name="hibernate.jdbc.batch_size" value='50' />
+             <property name="hibernate.default_batch_fetch_size" value='25' />
+ <!--             <property name="hibernate.cache.provider_class" value ="org.hibernate.cache.NoCacheProvider" />
+             <property name="hibernate.cache.use_query_cache" value ="true" /> -->
+      <!-- Please change username passowrd and port and other details to point to your database -->       
+             
+             
+          </properties>
+          
+    </persistence-unit>
+</persistence>
